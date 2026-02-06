@@ -1,8 +1,8 @@
 const signupBtn = document.getElementById("signup");
 
 signupBtn.addEventListener("click", () => {
-  const email = document.getElementById("signupEmail").value;
-  const password = document.getElementById("signupPassword").value;
+  const email = document.getElementById("signupEmail").value.trim();
+  const password = document.getElementById("signupPassword").value.trim();
 
   if (!(email && password)) {
     alert("Please fill all fields");
@@ -12,6 +12,7 @@ signupBtn.addEventListener("click", () => {
   localStorage.setItem("userEmail", email);
   localStorage.setItem("userPassword", password);
 
-  alert("Signup successful! Please login.");
-  window.location.href = "index.html";
+  alert("Signup successful!");
+  localStorage.setItem("isLoggedIn", "true");
+  window.location.href = "todo.html";
 });
