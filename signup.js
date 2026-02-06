@@ -16,3 +16,4 @@ signupBtn.addEventListener("click", () => {
   localStorage.setItem("isLoggedIn", "true");
   window.location.href = "todo.html";
 });
+
